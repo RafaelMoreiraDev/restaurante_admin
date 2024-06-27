@@ -1,0 +1,21 @@
+21/06/24
+criação da rota no arquivo models/ categorias.js
+Rota de listar categorias usando o método findAll
+Criação da rota de cadastrar catégorias usando o método 
+create e o método findOne para verificar se a catégoria ja existe e se não existir inserir ela 
+
+22/06/24
+criação da rota no arquio models/categorias.js
+Rota de atualizar categoria usanando o metodo findByPk que retorna a categoria pelo id
+botei validações pra se a categoria existe mesmo, e foi feita mudança no model da tabela catégoria no campo nome para não aceitar nomes de categorias ja existentes.
+
+24/06/2024
+alterei a forma como as informações vem da categoria vem do front que estava vindo por query params para body.
+criei a rota para deletar uma catégoria.
+Criei a rota pra cadastrar um produto novo
+
+25/06/2024
+Adicionei as rotas de deletar e editar item.
+Criei uma rota no formato que o front ta usando.
+finalizado a rota que retorna os dados no formato correto pro front renderizar o cardápio
+
