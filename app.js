@@ -8,7 +8,13 @@ const Item = require("./models/item");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+  origin: ['http://localhost:3000', 'https://restaurante-admin.onrender.com/produtos/categorias/'], // Adicione os domínios permitidos aqui
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Teste a conexão com o banco de dados
