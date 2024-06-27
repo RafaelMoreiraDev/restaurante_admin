@@ -10,8 +10,11 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://restaurante-admin.onrender.com/produtos/categorias/'], // Adicione os domínios permitidos aqui
-  optionsSuccessStatus: 200
+  origin: [
+    "http://localhost:3000",
+    "https://pedidosonlinezap.000webhostapp.com/",
+  ], // Adicione os domínios permitidos aqui
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
