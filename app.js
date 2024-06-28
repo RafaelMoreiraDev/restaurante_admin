@@ -6,18 +6,16 @@ const rotasCategoria = require("./routes/categorias");
 const rotasItem = require("./routes/itens");
 const Item = require("./models/item");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
+
 const app = express();
-
-const corsOptions = {
-  origin: [
-    "http://localhost:3000",
-    "https://pedidosonlinezap.000webhostapp.com/",
-  ], // Adicione os domínios permitidos aqui
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "*", // Permite todas as origens
+    methods: ["GET", "POST", "PUT", "DELETE"], // Permite todos os métodos
+    allowedHeaders: ["Content-Type", "Authorization"], // Permite cabeçalhos específicos
+  })
+);
 app.use(express.json());
 
 // Teste a conexão com o banco de dados
